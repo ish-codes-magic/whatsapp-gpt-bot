@@ -28,6 +28,7 @@ def handle_message():
     """
     body = request.get_json()
     # logging.info(f"request body: {body}")
+    print(f"request body: {body}")
 
     # Check if it's a WhatsApp status update
     if (
@@ -38,7 +39,7 @@ def handle_message():
     ):
         logging.info("Received a WhatsApp status update.")
         return jsonify({"status": "ok"}), 200
-
+    
     try:
         if is_valid_whatsapp_message(body):
             process_whatsapp_message(body)

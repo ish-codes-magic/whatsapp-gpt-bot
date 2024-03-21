@@ -1,0 +1,3 @@
+{'object': 'whatsapp_business_account', 
+'entry': [{'id': '247492305117246', 
+'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '15550798085', 'phone_number_id': '234537349749547'}, 'contacts': [{'profile': {'name': 'Akhil Nair'}, 'wa_id': '919581826533'}], 'messages': [{'from': '919581826533', 'id': 'wamid.HBgMOTE5NTgxODI2NTMzFQIAEhgWM0VCMEM1ODM4RUUxNDE4MTY0Qjk2RAA=', 'timestamp': '1710397247', 'text': {'body': 'I want to know with what you can help me'}, 'type': 'text'}]}, 'field': 'messages'}]}]}
