@@ -25,9 +25,10 @@ def get_text_message_input(recipient, text):
     )
 
 
-def generate_response(response):
+def generate_response(message_body):
     # Return text in uppercase
-    return response.upper()
+    response = requests.post('http://localhost:8080/gpt_bot/v1/final', json={'query': message_body})
+    return response.json()['response']
 
 
 def send_message(data):
@@ -89,7 +90,7 @@ def process_whatsapp_message(body):
     # response = generate_response(message_body, wa_id, name)
     # response = process_text_for_whatsapp(response)
 
-    data = get_text_message_input(current_app.config["RECIPIENT_WAID"], response)
+    data = get_text_message_input(wa_id, response)
     send_message(data)
 
 
